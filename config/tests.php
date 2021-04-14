@@ -37,9 +37,8 @@ return [
     WebView::class => static function (ContainerInterface $container) {
         $aliases = $container->get(Aliases::class);
         $eventDispatcher = $container->get(EventDispatcherInterface::class);
-        $theme = $container->get(Theme::class);
         $logger = $container->get(LoggerInterface::class);
 
-        return new WebView($aliases->get('@view'), $theme, $eventDispatcher, $logger);
+        return new WebView($aliases->get('@view'), $eventDispatcher, $logger);
     },
 ];

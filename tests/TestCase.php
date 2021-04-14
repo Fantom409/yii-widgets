@@ -106,7 +106,6 @@ abstract class TestCase extends BaseTestCase
                 '__class' => WebView::class,
                 '__construct()' => [
                     __DIR__ . '/public/view',
-                    Reference::to(Theme::class),
                     Reference::to(EventDispatcherInterface::class),
                     Reference::to(LoggerInterface::class),
                 ],
